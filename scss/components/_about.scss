@@ -1,0 +1,32 @@
+.about{
+    padding: 8% 0;
+    &__titel{
+        @include title($color_3, 30px, 600px);
+        text-align: center;
+        @media (min-width: 320px) {
+            font-size: 20px;
+          }
+        @media (min-width: 768px) {
+            font-size: 30px;
+          }
+          @media (min-width: 1200px) {
+            font-size: 40px;
+          }
+    }
+    &__desc{
+        font-family: 'Playpen Sans';
+        color:rgb(134, 37, 179); 
+        font-size: 20px;
+        text-align: center;
+        font-weight: 300px;
+        @media (min-width: 320px) {
+            font-size: 15px;
+          }
+        @media (min-width: 768px) {
+            font-size: 20px;
+          }
+          @media (min-width: 1200px) {
+            font-size: 30px;
+          }
+    }
+}

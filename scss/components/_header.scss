@@ -1,0 +1,112 @@
+.header {
+  @media (min-width:320px) {
+    padding: 10px 0;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__namber {
+    @include title($color_1, 20px, 200px);
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+  &__contakts {
+    gap: 35px;
+    display: flex;
+    @media (max-width: 480px) {
+      display: none;
+    }
+       @media (min-width: 768px) {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+        flex-direction: column;
+      } 
+      @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+      } 
+  }
+  &__logo {
+    width: 60px;
+    border-radius: 100%;
+    @media (min-width:320px) {
+      width: 35px;
+    }
+    @media (min-width:768px) {
+      width: 55px;
+    }
+  }
+  &__link {
+    @include title($color_1, 20px, 200px);
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+ nav{
+  @media (max-width:480px) {
+    display: none;
+  }
+ }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__hamburger {
+    @media (min-width: 320px) {
+      display: block;
+
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      .span-one {
+        transition: 0.5s;
+        width: 24px;
+
+        display: block;
+        border: 2px solid $color_1;
+      }
+      .span-two {
+        transition: 0.5s;
+        width: 14px;
+ 
+        display: block;
+        border: 2px solid $color_1;
+      }
+      .span-tree {
+        transition: 0.5s;
+        width: 4px;
+
+        display: block;
+        border: 2px solid $color_1;
+      }
+    }
+    @media (min-width: 768px) {
+      display: none;
+    }
+    &--active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translateY(5px);
+      }
+      span:nth-child(2) {
+        display: none;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-5px);
+      }
+    } 
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+}

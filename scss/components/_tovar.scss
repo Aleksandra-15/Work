@@ -1,0 +1,41 @@
+.tovar {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 250px;
+    border-radius: 1px 1px 8px 8px;
+    box-shadow: 0px -1px 1px 1px rgba(196, 193, 193, 0.637);
+    &:hover {
+      box-shadow: 0px -5px 10px 0px rgba(232, 100, 250, 0.5);
+    }
+    @media (min-width:320px) {
+    /*     padding: 0 100px; */
+    }
+  }
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+  &__titel {
+    @include title($color_2, 24px, 300px);
+    text-align: center;
+  }
+  &__desc {
+    font-size: 16px;
+    font-family: "Sometype Mono";
+    text-align: center;
+    color: $color_1;
+  }
+  &__clik {
+    font-size: 16px;
+    font-family: "Sometype Mono";
+    text-align: center;
+    color: $color_3;
+  }
+}
