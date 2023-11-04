@@ -1,31 +1,54 @@
 .promo {
   background: url(../img/promo-bg.png) center/cover no-repeat;
-  padding: 100px 0;
+  padding: 50px 0;
   height: 450px;
   width: 100%;
   @media (max-width: 480px) {
     background-color: $color_1;
- 
   }
   @media (min-width: 768px) {
-    padding: 100px 0;
+    padding: 70px 0;
     height: 750px;
   }
   @media (min-width: 1200px) {
-padding: 100px 0;
-height: 800px;
-  } 
+    padding: 70px 0;
+    height: 800px;
+  }
+  &__desc {
+    font-family: "Playpen Sans";
+    color: #e3d3d3;
+    font-size: 20px;
+    text-align:end;
+    font-weight: 300px;
+    @media (min-width: 320px) {
+      font-size: 15px;
+    }
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 30px;
+    }
+  }
   &__titel {
-    @include title($color_2, 36px, 200px);
-    text-align: center;
+    text-transform: uppercase;
+    @include title($color_3, 30px);
+    font-weight:600px;
+    text-align: end;
+
+    color: rgba(0, 0, 0, 0.6);
+
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+      0px -5px 35px rgba(255, 255, 255, 0.3);
+
     @media (min-width: 320px) {
       font-size: 20px;
     }
     @media (min-width: 768px) {
-      font-size: 26px;
+      font-size: 30px;
     }
     @media (min-width: 1200px) {
-      font-size: 36px;
+      font-size: 40px;
     }
   }
 }

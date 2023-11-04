@@ -8,9 +8,11 @@
     justify-content: space-between;
   }
   &__namber {
-    @include title($color_1, 20px, 200px);
+    @include title($color_1, 20px);
+    font-weight:400px;
     @media (min-width: 768px) {
       font-size: 14px;
+
     }
     @media (min-width: 1200px) {
       font-size: 20px;
@@ -44,7 +46,8 @@
     }
   }
   &__link {
-    @include title($color_1, 20px, 200px);
+    @include title($color_1, 20px);
+    font-weight:300px;
     @media (min-width: 768px) {
       font-size: 16px;
     }

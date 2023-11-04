@@ -1,6 +1,6 @@
-@mixin title ($color, $size, $font-weight){
+@mixin title ($color, $size){
     color: $color;
-    font-family:  'Playpen Sans';
-    font-weight:  $font-weight;
+    font-family:  'Recoleta';
+
     font-size: $size;
 }

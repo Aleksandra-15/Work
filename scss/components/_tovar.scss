@@ -7,33 +7,91 @@
 
     flex-wrap: wrap;
   }
+  &__div{
+    height: 80%;
+    position: relative
+    ;
+
+  }
+  &__desc{
+    position:absolute;
+    top: 0;
+    margin: 0;
+    left: 0;
+width: 100%;
+height: 100%;
+background: skyblue;
+opacity: 0;
+
+  }
   &__item {
-    width: 250px;
+    margin-bottom: 30px;
+    transition-timing-function: linear;
+    box-sizing: border-box;
+    transition: 1s;
+
+    position: relative;
+    height: 415px;
+    width: 330px;
     border-radius: 1px 1px 8px 8px;
-    box-shadow: 0px -1px 1px 1px rgba(196, 193, 193, 0.637);
+    box-shadow: 12px 12px 2px 1px rgba(85, 85, 255, 0.2);
+    @media (max-width: 480px) {
+      width: 480px;
+      height: 440px;
+    }
+    @media (max-width: 768px) {
+      width: 354px;
+      height: 440px;
+    }
+    @media (max-width: 1200px) {
+      width: 354px;
+      height: 440px;
+    }
+    &:hover .tovar__desc{
+      opacity: 1;
+    }
     &:hover {
-      box-shadow: 0px -5px 10px 0px rgba(232, 100, 250, 0.5);
+      transform: scale(10deg);
+
+      box-shadow: 10px 5px 5px rgba(232, 100, 250, 0.5);
+      &::before {
+        content: "Опис: - натуральна шкіра -Італійська підкладка на вибір: -байка  - підошва ~ косичка ~ 36/37/38/39/40/41.";
+        position: absolute;
+        width: 100%;
+        padding: 12% 25%;
+        height: 80%;
+        transition:6s ;
+        top: 0;
+        left: 0;
+        opacity: 0.90;
+        background: rgba(229, 187, 240, 0.9);
+        text-align: center;
+        position: absolute;
+        color: $color_4;
+        font-family: 'Recoleta';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35px;
+        letter-spacing: 0.54px;
+    
+      }
     }
-    @media (min-width:320px) {
-    /*     padding: 0 100px; */
+    img {
+      width: 100%;
+      object-fit: contain;
     }
   }
-  img {
-    width: 100%;
-    object-fit: contain;
-  }
+
   &__titel {
-    @include title($color_2, 24px, 300px);
+    @include title($color_2, 18px);
     text-align: center;
-  }
-  &__desc {
-    font-size: 16px;
-    font-family: "Sometype Mono";
-    text-align: center;
-    color: $color_1;
+    font-weight:200px;
+    margin-bottom: 10px;
   }
   &__clik {
-    font-size: 16px;
+    margin: 0;
+    font-size: 14px;
     font-family: "Sometype Mono";
     text-align: center;
     color: $color_3;
